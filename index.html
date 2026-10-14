@@ -9,32 +9,32 @@
 <body>
 
   <header class="cabecalho">
-    <a href="#home" class="logo">Criativa<span>Web</span></a>
+    <a href="#home" class="cabecalho__logo">Criativa<span class="cabecalho__logo-destaque">Web</span></a>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
-      <span></span><span></span><span></span>
+    <button class="cabecalho__toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+      <span class="cabecalho__toggle-barra"></span><span class="cabecalho__toggle-barra"></span><span class="cabecalho__toggle-barra"></span>
     </button>
 
     <nav class="menu" id="menu-principal" aria-label="Navegação principal">
-      <ul class="menu-lista">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
+      <ul class="menu__lista">
+        <li><a href="#home" class="menu__link">Home</a></li>
+        <li><a href="#sobre" class="menu__link">Sobre Nós</a></li>
+        <li><a href="#servicos" class="menu__link">Serviços</a></li>
+        <li><a href="#depoimentos" class="menu__link">Depoimentos</a></li>
+        <li><a href="#contato" class="menu__link">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="home" class="banner">
-      <div class="banner-texto">
-        <p class="destaque">Design digital com propósito</p>
+      <div class="banner__texto">
+        <p class="banner__destaque">Design digital com propósito</p>
         <h1>Transformamos ideias em experiências que o seu público lembra</h1>
         <p>Somos a Agência Criativa Web: unimos estratégia, design e tecnologia para criar sites e marcas que geram resultado de verdade.</p>
         <a href="#contato" class="botao">Fale com a gente</a>
       </div>
-      <figure class="banner-imagem">
+      <figure class="banner__imagem">
         <img
           src="imagens/banner-960.svg"
           srcset="imagens/banner-480.svg 480w, imagens/banner-960.svg 960w, imagens/banner-1440.svg 1440w"
@@ -46,11 +46,11 @@
     </section>
 
     <section id="sobre" class="secao">
-      <h2 class="titulo-secao">Sobre Nós</h2>
-      <div class="sobre-conteudo">
+      <h2 class="secao__titulo">Sobre Nós</h2>
+      <div class="sobre__texto">
         <p>Fundada com a missão de tornar o design digital acessível e eficiente, a Agência Criativa Web atende pequenos negócios e empresas em crescimento com soluções personalizadas.</p>
         <p>Acreditamos em processos transparentes, comunicação clara e entregas que respeitam o orçamento e o prazo combinados.</p>
-        <ul class="valores">
+        <ul class="sobre__valores">
           <li><strong>Criatividade</strong> com embasamento em dados</li>
           <li><strong>Transparência</strong> em cada etapa do projeto</li>
           <li><strong>Qualidade</strong> em todos os dispositivos</li>
@@ -58,78 +58,78 @@
       </div>
     </section>
 
-    <section id="servicos" class="secao secao-alternada">
-      <h2 class="titulo-secao">Serviços</h2>
-      <div class="grid-servicos">
+    <section id="servicos" class="secao secao--alternada">
+      <h2 class="secao__titulo">Serviços</h2>
+      <div class="grade">
         <article class="card">
-          <h3>Criação de Sites</h3>
+          <h3 class="card__titulo">Criação de Sites</h3>
           <p>Sites institucionais, landing pages e portais responsivos, pensados para converter visitantes em clientes.</p>
         </article>
         <article class="card">
-          <h3>Identidade Visual</h3>
+          <h3 class="card__titulo">Identidade Visual</h3>
           <p>Logotipo, paleta de cores, tipografia e manual de marca que mantêm sua comunicação consistente.</p>
         </article>
         <article class="card">
-          <h3>UI/UX Design</h3>
+          <h3 class="card__titulo">UI/UX Design</h3>
           <p>Pesquisa, wireframes e protótipos centrados no usuário para interfaces intuitivas e agradáveis.</p>
         </article>
         <article class="card">
-          <h3>Social Media</h3>
+          <h3 class="card__titulo">Social Media</h3>
           <p>Artes e calendário editorial para Instagram, LinkedIn e outras redes, com identidade própria.</p>
         </article>
         <article class="card">
-          <h3>Otimização de Desempenho</h3>
+          <h3 class="card__titulo">Otimização de Desempenho</h3>
           <p>Carregamento rápido, imagens otimizadas e boas práticas de acessibilidade e SEO.</p>
         </article>
         <article class="card">
-          <h3>Manutenção</h3>
+          <h3 class="card__titulo">Manutenção</h3>
           <p>Suporte contínuo, atualizações de conteúdo e monitoramento para o seu site sempre no ar.</p>
         </article>
       </div>
     </section>
 
     <section id="depoimentos" class="secao">
-      <h2 class="titulo-secao">Depoimentos</h2>
-      <div class="grid-depoimentos">
+      <h2 class="secao__titulo">Depoimentos</h2>
+      <div class="grade grade--depoimentos">
         <blockquote class="depoimento">
           <p>"A equipe entendeu o nosso negócio logo na primeira reunião. O novo site triplicou os pedidos pelo formulário."</p>
-          <footer>— Mariana Souza, <cite>Confeitaria Doce Ponto</cite></footer>
+          <footer class="depoimento__autor">— Mariana Souza, <cite class="depoimento__empresa">Confeitaria Doce Ponto</cite></footer>
         </blockquote>
         <blockquote class="depoimento">
           <p>"Processo organizado, prazos cumpridos e uma identidade visual que virou referência no nosso setor."</p>
-          <footer>— Carlos Mendes, <cite>Oficina Tech Fix</cite></footer>
+          <footer class="depoimento__autor">— Carlos Mendes, <cite class="depoimento__empresa">Oficina Tech Fix</cite></footer>
         </blockquote>
         <blockquote class="depoimento">
           <p>"Atendimento atencioso do início ao fim. Hoje consigo atualizar meu catálogo sem depender de ninguém."</p>
-          <footer>— Juliana Ferreira, <cite>Ateliê Juju Moda</cite></footer>
+          <footer class="depoimento__autor">— Juliana Ferreira, <cite class="depoimento__empresa">Ateliê Juju Moda</cite></footer>
         </blockquote>
       </div>
     </section>
 
-    <section id="contato" class="secao secao-alternada">
-      <h2 class="titulo-secao">Contato</h2>
-      <div class="contato-conteudo">
-        <div class="contato-info">
+    <section id="contato" class="secao secao--alternada">
+      <h2 class="secao__titulo">Contato</h2>
+      <div class="contato__conteudo">
+        <div>
           <h3>Fale conosco</h3>
           <p><strong>Endereço:</strong> Rua das Flores, 123 — Centro, São Paulo/SP</p>
-          <p><strong>Telefone:</strong> <a href="tel:+551140028922">(11) 4002-8922</a></p>
-          <p><strong>E-mail:</strong> <a href="mailto:contato@criativaweb.com.br">contato@criativaweb.com.br</a></p>
+          <p><strong>Telefone:</strong> <a href="tel:+551140028922" class="contato__link">(11) 4002-8922</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:contato@criativaweb.com.br" class="contato__link">contato@criativaweb.com.br</a></p>
         </div>
 
         <form class="formulario" action="#" method="post">
           <div class="campo">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome" class="campo__entrada" required>
           </div>
           <div class="campo">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" class="campo__entrada" required>
           </div>
           <div class="campo">
             <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <textarea id="mensagem" name="mensagem" class="campo__entrada" rows="5" required></textarea>
           </div>
-          <button type="submit" class="botao">Enviar mensagem</button>
+          <button type="submit" class="botao formulario__botao">Enviar mensagem</button>
         </form>
       </div>
     </section>
@@ -140,20 +140,20 @@
   </footer>
 
   <script>
-    const botaoMenu = document.querySelector('.menu-toggle');
+    const botaoMenu = document.querySelector('.cabecalho__toggle');
     const menu = document.getElementById('menu-principal');
 
     botaoMenu.addEventListener('click', () => {
       const aberto = botaoMenu.getAttribute('aria-expanded') === 'true';
       botaoMenu.setAttribute('aria-expanded', String(!aberto));
       botaoMenu.setAttribute('aria-label', aberto ? 'Abrir menu' : 'Fechar menu');
-      menu.classList.toggle('aberto');
+      menu.classList.toggle('menu--aberto');
     });
 
     menu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         botaoMenu.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('aberto');
+        menu.classList.remove('menu--aberto');
       });
     });
 
