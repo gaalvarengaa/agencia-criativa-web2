@@ -1,0 +1,375 @@
+/* ===== Variáveis (cores e tipografia) ===== */
+:root {
+  --cor-primaria: #6d28d9;
+  --cor-secundaria: #f97316;
+  --cor-texto: #1f2937;
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #f5f3ff;
+  --cor-texto-claro: #ffffff;
+  --sombra: 0 0.5rem 1.5rem rgba(31, 41, 55, 0.12);
+  --raio: 0.75rem;
+  --espaco: 1.5rem;
+}
+
+/* ===== Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px por padrão, base para rem */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--cor-primaria);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 1.2rem + 2.5vw, 3.2rem);
+}
+
+h2.titulo-secao {
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
+  text-align: center;
+  color: var(--cor-primaria);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/* ===== Cabeçalho e menu ===== */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 5%;
+  background: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--cor-secundaria);
+}
+
+.menu {
+  /* Mobile: oculto até o botão hambúrguer ser clicado */
+  display: none;
+  width: 100%;
+}
+
+.menu.aberto {
+  display: block;
+}
+
+.menu-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.menu-lista a {
+  display: block;
+  padding: 0.5em 0.75em;
+  border-radius: 0.5rem;
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-lista a:hover,
+.menu-lista a:focus {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 1.75rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 0.2rem;
+  background: var(--cor-texto-claro);
+  border-radius: 0.1rem;
+}
+
+/* ===== Botões ===== */
+.botao {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border: 0;
+  border-radius: 999px;
+  background: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* ===== Home / Banner ===== */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco);
+  padding: 3rem 5%;
+  background: var(--cor-fundo-alt);
+}
+
+.banner-texto {
+  max-width: 40rem;
+}
+
+.destaque {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-secundaria);
+}
+
+.banner-imagem {
+  width: 100%;
+  max-width: 32rem;
+  margin: 0;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+/* ===== Seções genéricas ===== */
+.secao {
+  padding: 3rem 5%;
+}
+
+.secao-alternada {
+  background: var(--cor-fundo-alt);
+}
+
+.sobre-conteudo {
+  max-width: 45rem;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+.valores {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+/* ===== Serviços (Grid) ===== */
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--espaco);
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--cor-fundo);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  border-top: 0.3rem solid var(--cor-primaria);
+}
+
+.card h3 {
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+}
+
+/* ===== Depoimentos (Grid) ===== */
+.grid-depoimentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: var(--espaco);
+  margin-top: 2rem;
+}
+
+.depoimento {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--cor-fundo-alt);
+  border-left: 0.3rem solid var(--cor-secundaria);
+  border-radius: var(--raio);
+  font-style: italic;
+}
+
+.depoimento footer {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.depoimento cite {
+  font-weight: 400;
+}
+
+/* ===== Contato ===== */
+.contato-conteudo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 60rem;
+  margin: 2rem auto 0;
+}
+
+.contato-info a {
+  color: var(--cor-primaria);
+  word-break: break-word;
+}
+
+.formulario {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--cor-fundo);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.7em 0.9em;
+  font: inherit;
+  border: 0.1rem solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: 0.2rem solid var(--cor-primaria);
+  outline-offset: 0.1rem;
+}
+
+.formulario .botao {
+  justify-self: start;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  padding: 1.5rem 5%;
+  text-align: center;
+  background: var(--cor-texto);
+  color: var(--cor-texto-claro);
+  font-size: 0.9rem;
+}
+
+/* ===== Media queries ===== */
+
+/* Telas médias (tablets, >= 48em = 768px) */
+@media (min-width: 48em) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    width: auto;
+  }
+
+  .menu-lista {
+    flex-direction: row;
+    margin: 0;
+    gap: 0.25rem;
+  }
+
+  .banner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .contato-conteudo {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* Telas grandes (desktops, >= 64em = 1024px) */
+@media (min-width: 64em) {
+  .banner {
+    padding: 4rem 8%;
+  }
+
+  .secao {
+    padding: 4rem 8%;
+  }
+}
+
+/* Telas muito pequenas (celulares estreitos) */
+@media (max-width: 22.5em) {
+  .cabecalho {
+    padding: 0.75rem 4%;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .card,
+  .depoimento,
+  .formulario {
+    padding: 1.1rem;
+  }
+}

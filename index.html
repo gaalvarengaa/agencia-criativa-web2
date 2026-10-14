@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência Criativa Web</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <a href="#home" class="logo">Criativa<span>Web</span></a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="menu-principal" aria-label="Navegação principal">
+      <ul class="menu-lista">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="banner">
+      <div class="banner-texto">
+        <p class="destaque">Design digital com propósito</p>
+        <h1>Transformamos ideias em experiências que o seu público lembra</h1>
+        <p>Somos a Agência Criativa Web: unimos estratégia, design e tecnologia para criar sites e marcas que geram resultado de verdade.</p>
+        <a href="#contato" class="botao">Fale com a gente</a>
+      </div>
+      <figure class="banner-imagem">
+        <img
+          src="imagens/banner-960.svg"
+          srcset="imagens/banner-480.svg 480w, imagens/banner-960.svg 960w, imagens/banner-1440.svg 1440w"
+          sizes="(max-width: 700px) 90vw, (max-width: 1100px) 45vw, 520px"
+          alt="Ilustração abstrata de layout de site em tons de roxo e laranja"
+          width="960"
+          height="640">
+      </figure>
+    </section>
+
+    <section id="sobre" class="secao">
+      <h2 class="titulo-secao">Sobre Nós</h2>
+      <div class="sobre-conteudo">
+        <p>Fundada com a missão de tornar o design digital acessível e eficiente, a Agência Criativa Web atende pequenos negócios e empresas em crescimento com soluções personalizadas.</p>
+        <p>Acreditamos em processos transparentes, comunicação clara e entregas que respeitam o orçamento e o prazo combinados.</p>
+        <ul class="valores">
+          <li><strong>Criatividade</strong> com embasamento em dados</li>
+          <li><strong>Transparência</strong> em cada etapa do projeto</li>
+          <li><strong>Qualidade</strong> em todos os dispositivos</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="servicos" class="secao secao-alternada">
+      <h2 class="titulo-secao">Serviços</h2>
+      <div class="grid-servicos">
+        <article class="card">
+          <h3>Criação de Sites</h3>
+          <p>Sites institucionais, landing pages e portais responsivos, pensados para converter visitantes em clientes.</p>
+        </article>
+        <article class="card">
+          <h3>Identidade Visual</h3>
+          <p>Logotipo, paleta de cores, tipografia e manual de marca que mantêm sua comunicação consistente.</p>
+        </article>
+        <article class="card">
+          <h3>UI/UX Design</h3>
+          <p>Pesquisa, wireframes e protótipos centrados no usuário para interfaces intuitivas e agradáveis.</p>
+        </article>
+        <article class="card">
+          <h3>Social Media</h3>
+          <p>Artes e calendário editorial para Instagram, LinkedIn e outras redes, com identidade própria.</p>
+        </article>
+        <article class="card">
+          <h3>Otimização de Desempenho</h3>
+          <p>Carregamento rápido, imagens otimizadas e boas práticas de acessibilidade e SEO.</p>
+        </article>
+        <article class="card">
+          <h3>Manutenção</h3>
+          <p>Suporte contínuo, atualizações de conteúdo e monitoramento para o seu site sempre no ar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="secao">
+      <h2 class="titulo-secao">Depoimentos</h2>
+      <div class="grid-depoimentos">
+        <blockquote class="depoimento">
+          <p>"A equipe entendeu o nosso negócio logo na primeira reunião. O novo site triplicou os pedidos pelo formulário."</p>
+          <footer>— Mariana Souza, <cite>Confeitaria Doce Ponto</cite></footer>
+        </blockquote>
+        <blockquote class="depoimento">
+          <p>"Processo organizado, prazos cumpridos e uma identidade visual que virou referência no nosso setor."</p>
+          <footer>— Carlos Mendes, <cite>Oficina Tech Fix</cite></footer>
+        </blockquote>
+        <blockquote class="depoimento">
+          <p>"Atendimento atencioso do início ao fim. Hoje consigo atualizar meu catálogo sem depender de ninguém."</p>
+          <footer>— Juliana Ferreira, <cite>Ateliê Juju Moda</cite></footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contato" class="secao secao-alternada">
+      <h2 class="titulo-secao">Contato</h2>
+      <div class="contato-conteudo">
+        <div class="contato-info">
+          <h3>Fale conosco</h3>
+          <p><strong>Endereço:</strong> Rua das Flores, 123 — Centro, São Paulo/SP</p>
+          <p><strong>Telefone:</strong> <a href="tel:+551140028922">(11) 4002-8922</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:contato@criativaweb.com.br">contato@criativaweb.com.br</a></p>
+        </div>
+
+        <form class="formulario" action="#" method="post">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="botao">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const botaoMenu = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu-principal');
+
+    botaoMenu.addEventListener('click', () => {
+      const aberto = botaoMenu.getAttribute('aria-expanded') === 'true';
+      botaoMenu.setAttribute('aria-expanded', String(!aberto));
+      botaoMenu.setAttribute('aria-label', aberto ? 'Abrir menu' : 'Fechar menu');
+      menu.classList.toggle('aberto');
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        botaoMenu.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('aberto');
+      });
+    });
+
+    document.querySelector('.formulario').addEventListener('submit', (evento) => {
+      evento.preventDefault();
+      alert('Obrigado pelo contato! (Envio real não implementado neste exercício.)');
+      evento.target.reset();
+    });
+  </script>
+</body>
+</html>
